@@ -39,15 +39,20 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(signUp);
         }
     public void SignIn(View view){
-        Email = login_email.getText().toString();
-        Password = login_password.getText().toString();
-
-            if(Email.isEmpty()){
-                login_email.setError("You need to enter a Email");
-            }
-            else if(Password.isEmpty()){
-                login_password.setError("You need to enter a Password");
-            }
+//        Email = login_email.getText().toString();
+//        Password = login_password.getText().toString();
+//
+//            if(Email.isEmpty()){
+//                login_email.setError("You need to enter a Email");
+//            }
+//            else if(Password.isEmpty()){
+//                login_password.setError("You need to enter a Password");
+//            }
+//        else {
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
+        finish();
+//            }
         }
     public void ForgotPassword(View view){
                 View forgotLayout = findViewById(R.id.forgotlayout);

@@ -11,11 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.murali.hariprahlad.freefood.services.SessionManager;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    SessionManager sessionManager;
+//    SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +29,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        sessionManager = new SessionManager(getApplicationContext());
+//        sessionManager = newone SessionManager(getApplicationContext());
     }
 
     @Override
@@ -73,14 +71,14 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_myprofile) {
-            if(sessionManager.checkLogin()){
-//                Intent login = new Intent(MainActivity.this,LoginActivity.class);
-//                startActivity(login);
-            }
-            else {
-                Intent myprofile = new Intent(MainActivity.this,MyprofileActivity.class);
-                startActivity(myprofile);
-            }
+//            if(sessionManager.checkLogin()){
+////                Intent login = newone Intent(MainActivity.this,LoginActivity.class);
+////                startActivity(login);
+//            }
+//            else {
+//                Intent myprofile = newone Intent(MainActivity.this,MyprofileActivity.class);
+//                startActivity(myprofile);
+//            }
 
         } else if (id == R.id.nav_myorders) {
 
